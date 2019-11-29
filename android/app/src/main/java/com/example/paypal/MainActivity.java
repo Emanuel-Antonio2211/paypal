@@ -26,10 +26,9 @@ import java.util.List;
 
 public class MainActivity extends FlutterActivity {
   private static final String CHANNEL = "paypal";
-    private MethodChannel.Result result;
 
   PayPalConfiguration m_configuration;
-  //String m_paypalClientId = "TuClientIdPaypal"; //tener una cuenta de paypal developer
+  String m_paypalClientId = "AXIAUMr5Wvw1ArUNzexxNr_BzxecGVZhCDkKe66lXqAhw4CHRMIyr6oTXsdSiBWgcZjFFWWVlBpZJkKI"; //tener una cuenta de paypal developer
   Intent m_service;
   String tipoMoneda = "USD";
   Double precio;
@@ -43,30 +42,28 @@ String idTransaccion;
 String idPago;
 String fechaPago;
 
-String clientId;
+String clientid;
+
+MethodChannel.Result result;
+MethodChannel channel;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     GeneratedPluginRegistrant.registerWith(this);
 
-    m_configuration = new PayPalConfiguration()
-            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX) //sandbox para test, production para real
-            .clientId(clientId);
 
-    m_service = new Intent(this, PayPalService.class);
-    m_service.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,m_configuration); //configuration above
-      startService(m_service); //paypal service, listening to calls to paypal app
-MethodChannel channel = new MethodChannel(getFlutterView(),"paypal");
+channel = new MethodChannel(getFlutterView(),"paypal");
 channel.setMethodCallHandler((call, result) -> { //call obtiene los parámetros y que metodos se están ejecutando
     // desde el código dart,
     // result para enviar datos resultantes
     switch (call.method){
         case "payment":
+            clientid = call.argument("clientid");
             Double precio = call.argument("precio");
             String descripcion = call.argument("descripcion");
             datos = call.argument("lista");
-            clientId = call.argument("clientid");
+
             payment(precio,descripcion);
            /* List resultado = payment(precio,descripcion);
             if(resultado != null){
@@ -80,14 +77,23 @@ channel.setMethodCallHandler((call, result) -> { //call obtiene los parámetros 
 
         case "listaresult":
 
-            result.success(listaresult(datos));
+            result.success(listaresult(datos));//listaresult(datos)
         break;
 
         default:
             result.notImplemented();
     }} );
 
+      m_configuration = new PayPalConfiguration()
+              .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX) //sandbox para test, production para real
+              .clientId(m_paypalClientId);
+
+      m_service = new Intent(this, PayPalService.class);
+      m_service.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,m_configuration); //configuration above
+      startService(m_service); //paypal service, listening to calls to paypal app
+
   }
+
 
 
 public void payment(Double valor, String descripcion){
@@ -111,12 +117,13 @@ public void payment(Double valor, String descripcion){
 }
 
 public List listaresult(List info){
+      channel.invokeMethod("enlistar",info);
       return info;
 }
 
 @Override
 public void onActivityResult(int requestCode, int resultCode, Intent data){
-  //  super.onActivityResult(requestCode,resultCode,data);
+  super.onActivityResult(requestCode,resultCode,data);
 
     //MethodCall methodCall;
     //String estado;
@@ -161,7 +168,7 @@ public void onActivityResult(int requestCode, int resultCode, Intent data){
 
                     System.out.println(datos);
 
-
+                    //resultado.success(datos);
 
                 }else{
                     System.out.println(estado);

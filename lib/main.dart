@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List resultados=List();
   List infoDato = List();
   String _result;
-  String clientId = "TuClientId"; //clientId de paypal developer
+  String clientId = "AXIAUMr5Wvw1ArUNzexxNr_BzxecGVZhCDkKe66lXqAhw4CHRMIyr6oTXsdSiBWgcZjFFWWVlBpZJkKI"; //clientId de paypal developer AXIAUMr5Wvw1ArUNzexxNr_BzxecGVZhCDkKe66lXqAhw4CHRMIyr6oTXsdSiBWgcZjFFWWVlBpZJkKI
 
   @override
   void initState() {
@@ -74,43 +74,47 @@ class _MyHomePageState extends State<MyHomePage> {
     await platform.invokeMethod('payment',{
       "precio": 10.0,
       "descripcion": "Este es una prueba",
-      "lista": datos,
-      "clientid": clientId
+      "lista": datos
+      //"clientid": clientId
     });
   }
 
   Future<List> enlistar()async{
 
+
    infoDato = await platform.invokeListMethod('listaresult');
-  // print(infoDato);
+    print(infoDato);
    return infoDato;
   }
 
-  //resultados = platform.invokeMethod("listaDatos");
+
 
   @override
   Widget build(BuildContext context) {
   final size = MediaQuery.of(context).size;
-   Timer t = Timer( Duration(microseconds: 1),(){
-      /*setState(() {
 
-      });*/
 
+  if(infoDato.isEmpty){
+    Future.delayed(
+        Duration(seconds: 3),(){
+      setState(() {
+
+      });
       enlistar();
-    });
-
-   Future.delayed(
+    }
+    );
+  }else{
+    print(infoDato);
+  }
+   /*Future.delayed(
        Duration(microseconds: 1),(){
-     setState(() {
+         setState(() {
 
-     });
-     enlistar();
-   }
-   );
+         });
+         enlistar();
+     }
+   );*/
 
-
-
-   t.cancel();
 
   /*if(infoDato[5] == "approved"){
     showDialog(
@@ -151,16 +155,13 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }*/
 
-
-
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center, //infoDato.isEmpty
           children: <Widget>[
             infoDato.isEmpty ?
             RaisedButton(
@@ -171,10 +172,10 @@ class _MyHomePageState extends State<MyHomePage> {
                //enlistar();
               },
             ):RaisedButton(
-              child: Text('Volver a pagar'),
+              child: Text('Volver a detalles'),
               onPressed: (){
 
-                payment();
+               // payment();
                 //enlistar();
               },
             ),
@@ -186,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
             )*/
           infoDato.isNotEmpty ?
            Text(
-              '${infoDato[5]}',//infoDato[5] = approved
+              'Pago aprobado',//infoDato[5] = approved
               //style: Theme.of(context).textTheme.display1,
             ):Text(
             '',//infoDato[5] = approved

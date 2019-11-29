@@ -1,0 +1,102 @@
+[
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_paypal_logo.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_paypal_logo.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_ic_jcb.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_ic_jcb.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_ic_jcb.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_ic_jcb.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_ic_discover.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_ic_discover.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_paypal_logo.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_paypal_logo.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
+        "source": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/android/app/src/main/res/drawable/launch_background.xml"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_ic_discover.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_ic_discover.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_ic_amex.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_ic_amex.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_cio_paypal_logo.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-xhdpi-v4/cio_paypal_logo.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_ic_paypal_monogram.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_ic_paypal_monogram.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_ic_paypal_monogram.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_ic_paypal_monogram.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_cio_ic_paypal_monogram.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-xhdpi-v4/cio_ic_paypal_monogram.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_ic_visa.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_ic_visa.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_ic_mastercard.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_ic_mastercard.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_ic_amex.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_ic_amex.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_cio_card_io_logo.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-mdpi-v4/cio_card_io_logo.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_cio_card_io_logo.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-xhdpi-v4/cio_card_io_logo.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_ic_mastercard.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_ic_mastercard.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_ic_visa.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_ic_visa.png"
+    },
+    {
+        "merged": "/Volumes/CODECTI/AndroidStudioProjects/paypal2/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_cio_card_io_logo.png.flat",
+        "source": "/Users/macbookair/.gradle/caches/transforms-1/files-1.1/jetified-android-sdk-5.5.1.aar/dc707453901a2976b3613fc6a5f4cbf7/res/drawable-hdpi-v4/cio_card_io_logo.png"
+    }
+]
