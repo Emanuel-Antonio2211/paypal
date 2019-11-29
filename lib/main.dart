@@ -33,6 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List resultados=List();
   List infoDato = List();
   String _result;
+  String clientId = "TuClientId"; //clientId de paypal developer
 
   @override
   void initState() {
@@ -73,7 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
     await platform.invokeMethod('payment',{
       "precio": 10.0,
       "descripcion": "Este es una prueba",
-      "lista": datos
+      "lista": datos,
+      "clientid": clientId
     });
   }
 

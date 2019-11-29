@@ -29,7 +29,7 @@ public class MainActivity extends FlutterActivity {
     private MethodChannel.Result result;
 
   PayPalConfiguration m_configuration;
-  String m_paypalClientId = "TuClientIdPaypal"; //tener una cuenta de paypal developer
+  //String m_paypalClientId = "TuClientIdPaypal"; //tener una cuenta de paypal developer
   Intent m_service;
   String tipoMoneda = "USD";
   Double precio;
@@ -37,11 +37,13 @@ public class MainActivity extends FlutterActivity {
   int m_paypalRequestCode = 999;
   List datosResultantes= new ArrayList();
   List datos = new ArrayList();
+  
+String estado;
+String idTransaccion;
+String idPago;
+String fechaPago;
 
-    String estado;
-    String idTransaccion;
-    String idPago;
-    String fechaPago;
+String clientId;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +52,7 @@ public class MainActivity extends FlutterActivity {
 
     m_configuration = new PayPalConfiguration()
             .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX) //sandbox para test, production para real
-            .clientId(m_paypalClientId);
+            .clientId(clientId);
 
     m_service = new Intent(this, PayPalService.class);
     m_service.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,m_configuration); //configuration above
@@ -64,6 +66,7 @@ channel.setMethodCallHandler((call, result) -> { //call obtiene los parámetros 
             Double precio = call.argument("precio");
             String descripcion = call.argument("descripcion");
             datos = call.argument("lista");
+            clientId = call.argument("clientid");
             payment(precio,descripcion);
            /* List resultado = payment(precio,descripcion);
             if(resultado != null){
