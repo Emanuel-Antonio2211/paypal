@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
+            "type": "dart",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}",

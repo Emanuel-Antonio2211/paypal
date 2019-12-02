@@ -30,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   List resultados=List();
   List infoDato = List();
   String _result;
@@ -39,7 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
 
     super.initState();
+    
     //this.enlistar();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+
   }
   
   final platform = MethodChannel('paypal');
@@ -94,13 +102,14 @@ class _MyHomePageState extends State<MyHomePage> {
   final size = MediaQuery.of(context).size;
 
 
-  if(infoDato.isEmpty){
+ if(infoDato.isEmpty){
     Future.delayed(
         Duration(seconds: 3),(){
       setState(() {
 
       });
       enlistar();
+     
     }
     );
   }else{
@@ -168,8 +177,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Ingresar'),
               onPressed: (){
 
-               payment();
-               //enlistar();
+              payment();
+              
+              
               },
             ):RaisedButton(
               child: Text('Volver a detalles'),

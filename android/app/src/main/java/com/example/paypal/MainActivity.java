@@ -27,6 +27,10 @@ import java.util.List;
 public class MainActivity extends FlutterActivity {
   private static final String CHANNEL = "paypal";
 
+  MethodChannel.Result result;
+
+  MethodChannel channel;
+
   PayPalConfiguration m_configuration;
   String m_paypalClientId = "AXIAUMr5Wvw1ArUNzexxNr_BzxecGVZhCDkKe66lXqAhw4CHRMIyr6oTXsdSiBWgcZjFFWWVlBpZJkKI"; //tener una cuenta de paypal developer
   Intent m_service;
@@ -37,21 +41,17 @@ public class MainActivity extends FlutterActivity {
   List datosResultantes= new ArrayList();
   List datos = new ArrayList();
   
-String estado;
-String idTransaccion;
-String idPago;
-String fechaPago;
+  String estado;
+  String idTransaccion;
+  String idPago;
+  String fechaPago;
 
-String clientid;
-
-MethodChannel.Result result;
-MethodChannel channel;
+  String clientid;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     GeneratedPluginRegistrant.registerWith(this);
-
 
 channel = new MethodChannel(getFlutterView(),"paypal");
 channel.setMethodCallHandler((call, result) -> { //call obtiene los parámetros y que metodos se están ejecutando
@@ -65,6 +65,8 @@ channel.setMethodCallHandler((call, result) -> { //call obtiene los parámetros 
             datos = call.argument("lista");
 
             payment(precio,descripcion);
+           //paypal.payment(precio,descripcion);
+           result.success(null);
            /* List resultado = payment(precio,descripcion);
             if(resultado != null){
                 result.success(resultado);//Aquí se envía un dato válido
@@ -77,7 +79,9 @@ channel.setMethodCallHandler((call, result) -> { //call obtiene los parámetros 
 
         case "listaresult":
 
-            result.success(listaresult(datos));//listaresult(datos)
+           result.success(listaresult(datos));//listaresult(datos)
+
+            //result.success(paypal.listaresult(datos));
         break;
 
         default:
